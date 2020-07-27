@@ -7,7 +7,7 @@ services:
       - MYSQL_PASSWORD=root
       - MYSQL_DATABASE=petz
     ports:
-      - "3307:3307"
+      - "3307:3306"
   springboot-docker-container:
     image: springboot-docker-container
     ports:
