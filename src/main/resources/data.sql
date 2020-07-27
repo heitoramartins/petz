@@ -63,7 +63,7 @@ CREATE TABLE `client_documents` (
   KEY `FK9gho7tm6pmfcqj8jxdnpypkkc` (`Client_id`),
   CONSTRAINT `FK9gho7tm6pmfcqj8jxdnpypkkc` FOREIGN KEY (`Client_id`) REFERENCES `client` (`id`),
   CONSTRAINT `FKhb0ttuu9gpspmid13leodbj50` FOREIGN KEY (`documents_id`) REFERENCES `document` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of client_documents
@@ -81,7 +81,7 @@ CREATE TABLE `document` (
   `number` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of document
@@ -102,7 +102,7 @@ CREATE TABLE `pet` (
   PRIMARY KEY (`id`),
   KEY `FKill1queq7m2fox8ktdhh56546` (`client_id`),
   CONSTRAINT `FKill1queq7m2fox8ktdhh56546` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of pet
