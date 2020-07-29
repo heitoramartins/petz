@@ -1,15 +1,12 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : MySQL
 Source Server Version : 80017
 Source Host           : localhost:3306
 Source Database       : petz
-
 Target Server Type    : MYSQL
 Target Server Version : 80017
 File Encoding         : 65001
-
 Date: 2020-07-27 12:15:43
 */
 

@@ -1,23 +1,23 @@
 version: '3'
+
 services:
-  mysql-standalone:
+  mysql-docker-container:
     image: 'mysql:5.7'
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_PASSWORD=root
       - MYSQL_DATABASE=petz
-    ports:
-      - "3307:3306"
-  springboot-docker-container:
-    image: springboot-docker-container
-    ports:
-      - "8080:8080"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/petz?useTimezone=true&serverTimezone=UTC&useSSL=false
-      SPRING_DATASOURCE_USERNAME: "root"
-      SPRING_DATASOURCE_PASSWORD: "root"
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - /data/mysql
+  spring-boot-jpa-app:
+    image: spring-boot-jpa-image
     build:
-      context: "./"
-      dockerfile: "Dockerfile"
+      context: ./
+      dockerfile: Dockerfile
     depends_on:
-      - mysql-standalone
+      - mysql-docker-container
+    ports:
+      - 8087:8080
+    volumes:
+      - /data/spring-boot-app

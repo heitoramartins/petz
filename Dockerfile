@@ -1,6 +1,9 @@
-FROM openjdk:8-jdk-alpine
-VOLUME /tmp
+FROM java:8
+FROM maven:alpine
+WORKDIR /app
+COPY . /app
+RUN mvn -v
+RUN mvn clean install -DskipTests
 EXPOSE 8080
-COPY target/petz-0.0.1-SNAPSHOT.jar petz.jar
-ADD target/petz-0.0.1-SNAPSHOT.jar petz.jar
-ENTRYPOINT ["java","-jar","/petz.jar"]
+ADD ./target/petz-0.0.1-SNAPSHOT.jar petz-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=docker","petz-0.0.1-SNAPSHOT.jar"]
