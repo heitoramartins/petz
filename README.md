@@ -22,6 +22,7 @@ curl -X GET 'http://localhost:8087/v1/client'
 - docker container ps (copie o id do container do mysql)
 - docker exec -it cf1fdae66620  bin/bash 
 - mysql -uroot -p petz
+- password: root
 - show tables;
 
 INSERT INTO `address` VALUES ('1', 'SAO PAULO', 'BRASIL');
