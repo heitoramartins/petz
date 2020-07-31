@@ -2,8 +2,64 @@
 
 Utilize **docker-compose.yaml**.
 
+find-all
 ```
 curl -X GET 'http://localhost:8087/v1/client'
+```
+
+findBy-id
+```
+curl -X GET 'http://localhost:8087/v1/client/{id}'
+```
+
+update
+```
+curl -X PUT 'http://localhost:8087/v1/client/{id}'
+{
+    "id": 1,
+    "name": "Heitor Araujo Martins",
+    "address": {
+        "id": 1,
+        "country": "BRASIL",
+        "city": "SAO PAULO"
+    },
+    "documents": [
+        {
+            "id": 1,
+            "number": "98176897272",
+            "type": "CPF"
+        }
+    ]
+}
+```
+create
+```
+curl -X POST 'http://localhost:8087/v1/client'
+{
+    "id": null,
+    "name": "Heitor Araujo Martins",
+    "address": {
+        "id": 1,
+        "country": "BRASIL",
+        "city": "SAO PAULO"
+    },
+    "documents": [
+        {
+            "id": 1,
+            "number": "98176897272",
+            "type": "CPF"
+        }
+    ]
+}
+```
+delete
+```
+curl -X DELETE 'http://localhost:8087/v1/client/{id}'
+```
+
+Pet
+```
+curl -X GET 'http://localhost:8087/v1/petz'
 ```
 
 ## Tecnologias
