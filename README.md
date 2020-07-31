@@ -31,13 +31,13 @@ INSERT INTO `client` VALUES ('1', 'Heitor Araujo Martins', '1');
 INSERT INTO `client` VALUES ('2', 'Valmir Santos Neto', '1');
 INSERT INTO `client` VALUES ('3', 'Luciano Paccios', '2');
 
-INSERT INTO `client_documents` VALUES ('1', '1');
-INSERT INTO `client_documents` VALUES ('2', '2');
-INSERT INTO `client_documents` VALUES ('3', '3');
-
 INSERT INTO `document` VALUES ('1', '98176897272', 'CPF');
 INSERT INTO `document` VALUES ('2', '583437965', 'RG');
 INSERT INTO `document` VALUES ('3', '583437965', 'RG');
+
+INSERT INTO `client_documents` VALUES ('1', '1');
+INSERT INTO `client_documents` VALUES ('2', '2');
+INSERT INTO `client_documents` VALUES ('3', '3');
 
 INSERT INTO `pet` VALUES ('4', '9', 'Kelly', '1');
 INSERT INTO `pet` VALUES ('5', '2', 'Pluft', '2');
