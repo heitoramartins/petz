@@ -8,6 +8,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Table(name = "pet")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Pet  {

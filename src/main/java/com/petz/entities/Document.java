@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
+@Table(name = "document")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Document {
