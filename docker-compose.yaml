@@ -1,5 +1,4 @@
-version: '2'
-
+version: '3'
 services:
    mysql-docker-container:
       image: 'mysql:5.7'
@@ -20,6 +19,7 @@ services:
       image: spring-boot-jpa-image
       networks:
         - production-network
+      restart: always
       build:
         context: ./
         dockerfile: Dockerfile
